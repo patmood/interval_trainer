@@ -18,20 +18,10 @@ function countDown(i){
   },1000)
 }
 
-// function countDown(i){
-//   setInterval(function(){
-//     counter.innerHTML = i
-//     i--
-//     if (i < 0) {
-//       clearInterval(countDown)
-//       nextWorkout()
-//     }
-//   },1000)
-// }
-
 function reset(){
   start.style.display = 'block'
   counter.style.display = 'none'
+  description.style.display = 'none'
 }
 
 

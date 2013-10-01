@@ -1,5 +1,46 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+  margin: 0 auto;
+  background: #3498db;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px #2980b9;
+  position: relative;
+  padding: 0.3em 1em;
+}
+
+button:active {
+  top: 2px;
+  box-shadow: 0 4px #2980b9;
+}
+
+#start {
+  font-size: 42px;
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px #27ae60;
+  background: #2ecc71;
+}
+
+#start:active {
+  box-shadow: 0 4px #27ae60;
+}
+
 #counter {
   text-align: center;
   font-size: 72px;
-  font-family: Helvetica, Arial, sans-serif;
+}
+
+#description {
+  text-align: center;
+  font-size: 42px;
 }
