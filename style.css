@@ -11,7 +11,6 @@ h1 {
 }
 
 button {
-  margin: 0 auto;
   background-color: #2ecc71;
   box-shadow: 0 6px #27ae60;
   color: #fff;
@@ -31,6 +30,7 @@ button:active {
 }
 
 #start {
+  margin: 0 auto;
   font-size: 42px;
   display: block;
   width: 90%;
@@ -46,17 +46,29 @@ button:active {
   text-align: center;
   font-size: 42px;
 }
+#reset {
+  margin-right: 2%;
+}
 
-#skip {
-  display: none;
+#skip, #reset {
+  display: inline-block;
   margin-top: 50px;
   font-size: 24px;
-  width: 90%;
-  max-width: 300px;
   background-color: #e67e22;
   box-shadow: 0 6px #d35400;
+  width: 49%;
+  padding: 5 0 5 0px;
+
 }
-#skip:active {
+#skip:active, #reset:active {
   top: 2px;
   box-shadow: 0 4px #d35400;
+}
+
+#controls {
+  display: none;
+  margin: 0 auto;
+  font-size: 42px;
+  width: 90%;
+  max-width: 500px;
 }
