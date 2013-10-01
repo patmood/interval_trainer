@@ -36,7 +36,7 @@ function startWorkout(){
 
 function nextWorkout(){
   if (exercises[current]) {
-    body.style.background = "#3498db"
+    body.style.background = "#e74c3c"
     description.innerHTML = exercises[current]
     countDown(workInterval, rest)
   } else {
@@ -46,7 +46,7 @@ function nextWorkout(){
 
 function rest(){
   current++
-  body.style.background = "#e74c3c"
+  body.style.background = "#3498db"
   description.innerHTML = "Up Next:<br>"+exercises[current]
   countDown(restInterval, nextWorkout)
 }
