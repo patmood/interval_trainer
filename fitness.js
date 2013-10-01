@@ -1,6 +1,7 @@
 var welcome = document.getElementById('welcome')
 var clock = document.getElementById('counter')
 var body = document.getElementsByTagName('body')[0]
+var skipButton = document.getElementById('skip')
 var description = document.getElementById('description')
 var workInterval = 5
 var restInterval = 3
@@ -29,12 +30,14 @@ function reset(){
   welcome.style.display = 'block'
   counter.style.display = 'none'
   description.style.display = 'none'
+  skipButton.style.display = 'none'
 }
 
 
 function startWorkout(){
   welcome.style.display = 'none'
   counter.style.display = 'block'
+  skipButton.style.display = 'block'
   current = -1
   rest()
 }
@@ -57,3 +60,4 @@ function rest(){
 }
 
 start.addEventListener('click',startWorkout)
+skipButton.addEventListener('click',function(){ skip = true })
