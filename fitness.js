@@ -7,12 +7,15 @@ var restInterval = 3
 var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
 var skip = false
 var current
+var beep = new Audio("beep.wav")
+
 
 var counter = document.getElementById('counter')
 
 function countDown(i, nextAction){
   if (i < 0 || skip) {
     skip = false
+    beep.play()
     nextAction()
     return
   }
