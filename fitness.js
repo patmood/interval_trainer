@@ -1,45 +1,54 @@
-var start = document.getElementById('start')
+var welcome = document.getElementById('welcome')
 var clock = document.getElementById('counter')
+var body = document.getElementsByTagName('body')[0]
 var description = document.getElementById('description')
-var interval = 3
+var workInterval = 5
+var restInterval = 3
 var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
-var current = 0
+var current
 
 var counter = document.getElementById('counter')
 
-function countDown(i){
+function countDown(i, nextAction){
   if (i < 0) {
-    nextWorkout()
+    nextAction()
     return
   }
+  counter.innerHTML = i
   setTimeout(function(){
-    counter.innerHTML = i
-    countDown(i-1)
+    countDown(i-1,nextAction)
   },1000)
 }
 
 function reset(){
-  start.style.display = 'block'
+  welcome.style.display = 'block'
   counter.style.display = 'none'
   description.style.display = 'none'
 }
 
 
 function startWorkout(){
-  start.style.display = 'none'
+  welcome.style.display = 'none'
   counter.style.display = 'block'
-  description.innerHTML = exercises[current]
-  countDown(interval)
+  current = -1
+  rest()
 }
 
 function nextWorkout(){
-  current++
   if (exercises[current]) {
+    body.style.background = "#3498db"
     description.innerHTML = exercises[current]
-    countDown(interval)
+    countDown(workInterval, rest)
   } else {
     reset()
   }
+}
+
+function rest(){
+  current++
+  body.style.background = "#e74c3c"
+  description.innerHTML = "Up Next:<br>"+exercises[current]
+  countDown(restInterval, nextWorkout)
 }
 
 start.addEventListener('click',startWorkout)

@@ -1,10 +1,18 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: #3498db;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: normal;
+  text-align: center;
 }
 
 button {
   margin: 0 auto;
-  background: #3498db;
+  background: #2ecc71;
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -12,14 +20,14 @@ button {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  box-shadow: 0 6px #2980b9;
+  box-shadow: 0 6px #27ae60;
   position: relative;
   padding: 0.3em 1em;
 }
 
 button:active {
   top: 2px;
-  box-shadow: 0 4px #2980b9;
+  box-shadow: 0 4px #27ae60;
 }
 
 #start {
@@ -27,17 +35,11 @@ button:active {
   display: block;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 6px #27ae60;
-  background: #2ecc71;
-}
-
-#start:active {
-  box-shadow: 0 4px #27ae60;
 }
 
 #counter {
   text-align: center;
-  font-size: 72px;
+  font-size: 150px;
 }
 
 #description {
