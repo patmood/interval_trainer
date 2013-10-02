@@ -36,6 +36,7 @@ function reset(){
   body.style.background = "#3498db"
   skip = true
   clearTimeout(timeout)
+  timeout = null
   current = 0
 }
 
