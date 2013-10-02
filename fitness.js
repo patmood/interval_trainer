@@ -3,10 +3,10 @@ var clock = document.getElementById('counter')
 var body = document.getElementsByTagName('body')[0]
 var description = document.getElementById('description')
 var controls = document.getElementById('controls')
-var workInterval = 5
-var restInterval = 3
-// var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
-var exercises = ['Jumping Jacks', 'Wall Sit']
+var workInterval = 30
+var restInterval = 10
+var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
+// var exercises = ['Jumping Jacks', 'Wall Sit']
 var skip
 var current
 var timeout
@@ -34,9 +34,9 @@ function reset(){
   description.style.display = 'none'
   controls.style.display = 'none'
   body.style.background = "#3498db"
+  skip = true
   clearTimeout(timeout)
   current = 0
-  skip = true
 }
 
 
