@@ -5,9 +5,10 @@ var description = document.getElementById('description')
 var controls = document.getElementById('controls')
 var progressPoints = document.getElementById('progress').children
 
-var workInterval = 1 // 30
-var restInterval = 1 // 10
+var workInterval = 30
+var restInterval = 10
 var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
+// var exercises = ['Jumping Jacks', 'Wall Sit']
 var skip
 var current
 var timeout
@@ -24,7 +25,7 @@ function countDown(i, nextAction){
     return
   }
   counter.innerHTML = i
-  timeout = setTimeout(function(){
+  timeout = window.setTimeout(function(){
     countDown(i-1,nextAction)
   },1000)
 }
@@ -36,8 +37,6 @@ function reset(){
   controls.style.display = 'none'
   body.style.background = "#3498db"
   skip = true
-  clearTimeout(timeout)
-  timeout = null
   current = 0
 }
 
@@ -54,7 +53,7 @@ function startWorkout(){
 }
 
 function nextWorkout(){
-  if (!exercises[current]) reset()
+  if (!exercises[current]) { reset(); return }
   body.style.background = "#e74c3c"
   description.innerHTML = exercises[current]
   countDown(workInterval, rest)
@@ -63,7 +62,7 @@ function nextWorkout(){
 }
 
 function rest(){
-  if (!exercises[current]) reset()
+  if (!exercises[current]) { reset(); return }
   body.style.background = "#3498db"
   description.innerHTML = "Up Next:<br>"+exercises[current]
   countDown(restInterval, nextWorkout)
