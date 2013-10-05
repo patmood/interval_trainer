@@ -72,3 +72,25 @@ button:active {
   width: 90%;
   max-width: 500px;
 }
+#progress {
+  display: block;
+  height: 50px;
+  width: 480px;
+  margin: auto;
+}
+
+#progress div {
+  background-color: #fff;
+  margin: 0 5px;
+  float: left;
+  font-size: 70px;
+  line-height: 0.4em;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+#progress .done {
+  background-color: #f1c40f;
+}
