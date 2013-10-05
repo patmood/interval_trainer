@@ -36,6 +36,9 @@ function reset(){
   description.style.display = 'none'
   controls.style.display = 'none'
   body.style.background = "#3498db"
+  for (var i = 0; i < progressPoints.length; i++){
+    progressPoints[i].className = ""
+  }
   skip = true
   current = 0
 }
@@ -48,7 +51,6 @@ function startWorkout(){
   controls.style.display = 'block'
   current = 0
   skip = false
-  console.log(progressPoints)
   rest()
 }
 
