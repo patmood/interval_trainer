@@ -8,7 +8,12 @@ var progressPoints = document.getElementById('progress').children
 var workInterval = 30
 var restInterval = 10
 var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
+
+// // TESTING
+// var workInterval = 3
+// var restInterval = 1
 // var exercises = ['Jumping Jacks', 'Wall Sit']
+
 var skip
 var current
 var timeout
@@ -35,9 +40,9 @@ function reset(){
   counter.style.display = 'none'
   description.style.display = 'none'
   controls.style.display = 'none'
-  body.style.background = "#3498db"
+  body.style.background = '#3498db'
   for (var i = 0; i < progressPoints.length; i++){
-    progressPoints[i].className = ""
+    progressPoints[i].className = ' '
   }
   skip = true
   current = 0
@@ -72,4 +77,4 @@ function rest(){
 
 start.addEventListener('click',startWorkout)
 document.getElementById('skip').addEventListener('click', function(){ skip = true })
-document.getElementById('reset').addEventListener('click', reset)
+document.getElementById('reset').addEventListener('click', function(){ current = null; skip = true })
