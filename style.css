@@ -10,6 +10,14 @@ h1 {
   text-align: center;
 }
 
+a { color: #f1c40f; }
+a:hover { color: #f39c12; }
+a:visited { color: #8e44ad; }
+
+hr {
+  border: #fff 1px solid;
+}
+
 button {
   background-color: #2ecc71;
   box-shadow: 0 6px #27ae60;
@@ -27,6 +35,12 @@ button {
 button:active {
   top: 2px;
   box-shadow: 0 4px #27ae60;
+}
+#welcome {
+  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  line-height: 1.5em;
 }
 
 #start {
