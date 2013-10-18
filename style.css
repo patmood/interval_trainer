@@ -92,7 +92,7 @@ button:active {
   height: 50px;
   width: 90%;
   max-width: 500px;
-  margin: auto;
+  margin: 40px auto;
 }
 
 #progress div {
