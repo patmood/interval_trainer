@@ -34,3 +34,11 @@ reset = ->
   skip = true
   current = 0
 
+startWorkout = ->
+  description.style.display = 'block'
+  welcome.style.display = 'none'
+  counter.style.display = 'block'
+  controls.style.display = 'block'
+  current = 0
+  skip = false
+  rest()
