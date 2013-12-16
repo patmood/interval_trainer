@@ -27,6 +27,7 @@ var counter = document.getElementById('counter')
 function countDown(i, nextAction){
   if (i <= 0 || skip) {
     skip = false
+    beep.currentTime = 0
     beep.play()
     nextAction()
     return
