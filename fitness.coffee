@@ -5,6 +5,8 @@ description = document.getElementById("description")
 controls = document.getElementById("controls")
 progressPoints = document.getElementById("progress").children
 
+current = 0
+skip = false
 workInterval = 30
 restInterval = 10
 exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
@@ -29,7 +31,7 @@ reset = ->
   description.style.display = 'none'
   controls.style.display = 'none'
   body.style.background = '#3498db'
-  for i in [0..progressPoints.length]
+  for i in [0...progressPoints.length]
     progressPoints[i].className = ' '
   skip = true
   current = 0
