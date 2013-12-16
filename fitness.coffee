@@ -53,3 +53,10 @@ nextWorkout = ->
   progressPoints[current].className = 'done'
   current++
 
+rest = ->
+  if !exercises[current]
+    reset()
+    return
+  body.style.background = "#3498db"
+  description.innerHTML = "Up Next:<br>"+exercises[current]
+  countDown restInterval, nextWorkout
