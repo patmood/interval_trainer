@@ -106,3 +106,6 @@ button:active {
 #progress .done {
   color: #f1c40f;
 }
+@media screen and (min-height: 600px) {
+  #counter { font-size: 300px; };
+}
