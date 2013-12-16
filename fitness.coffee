@@ -60,3 +60,10 @@ rest = ->
   body.style.background = "#3498db"
   description.innerHTML = "Up Next:<br>"+exercises[current]
   countDown restInterval, nextWorkout
+
+start.addEventListener 'click',startWorkout
+document.getElementById('skip').addEventListener('click', -> skip = true )
+document.getElementById('reset').addEventListener('click', ->
+  current = null
+  skip = true
+)

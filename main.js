@@ -83,3 +83,16 @@ rest = function() {
   description.innerHTML = "Up Next:<br>" + exercises[current];
   return countDown(restInterval, nextWorkout);
 };
+
+start.addEventListener('click', startWorkout);
+
+document.getElementById('skip').addEventListener('click', function() {
+  var skip;
+  return skip = true;
+});
+
+document.getElementById('reset').addEventListener('click', function() {
+  var current, skip;
+  current = null;
+  return skip = true;
+});
