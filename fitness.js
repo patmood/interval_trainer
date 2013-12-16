@@ -1,3 +1,5 @@
+// Original Javascript
+
 var welcome = document.getElementById('welcome')
 var clock = document.getElementById('counter')
 var body = document.getElementsByTagName('body')[0]
