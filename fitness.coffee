@@ -42,3 +42,14 @@ startWorkout = ->
   current = 0
   skip = false
   rest()
+
+nextWorkout = ->
+  if !exercises[current]
+    reset()
+    return
+  body.style.background = "#e74c3c"
+  description.innerHTML = exercises[current]
+  countDown workInterval, rest
+  progressPoints[current].className = 'done'
+  current++
+
