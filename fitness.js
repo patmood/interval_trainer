@@ -1,5 +1,3 @@
-// Original Javascript
-
 var welcome = document.getElementById('welcome')
 var clock = document.getElementById('counter')
 var body = document.getElementsByTagName('body')[0]
@@ -9,12 +7,8 @@ var progressPoints = document.getElementById('progress').children
 
 var workInterval = 30
 var restInterval = 10
-var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
-
-// // TESTING
-// var workInterval = 3
-// var restInterval = 1
-// var exercises = ['Jumping Jacks', 'Wall Sit']
+// var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
+var exercises = ['Burpees', 'Wall Sit', 'Push-ups', 'Sit-ups','Box Jumps', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Close Grip Pushups', 'Stomach Hollow']
 
 var skip
 var current
