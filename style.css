@@ -40,7 +40,7 @@ button:active {
 #welcome {
   margin: auto;
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   line-height: 1.5em;
 }
 
@@ -49,12 +49,12 @@ button:active {
   font-size: 42px;
   display: block;
   width: 90%;
-  max-width: 500px;
 }
 
 #counter {
   text-align: center;
   font-size: 150px;
+  font-size: 35vw;
 }
 
 #description {
