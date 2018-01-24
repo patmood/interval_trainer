@@ -58,6 +58,7 @@ function reset() {
 }
 
 function startWorkout() {
+  beep.play() // Need to trigger play from user direct interaction
   description.style.display = 'block'
   welcome.style.display = 'none'
   counter.style.display = 'block'
