@@ -5,8 +5,12 @@ var description = document.getElementById('description')
 var controls = document.getElementById('controls')
 var progressPoints = document.getElementById('progress').children
 
-var workInterval = 30
-var restInterval = 10
+var DURATION_WORK = 30
+var DURATION_REST = 10
+var DURATION_BREAK = 120
+
+var noSleep = new NoSleep()
+
 // var exercises = ['Jumping Jacks', 'Wall Sit', 'Push-ups', 'Sit-ups','Step-ups', 'Squats', 'Tricep Dips', 'Plank', 'High Knees', 'Lunges', 'Push-ups and Rotation', 'Side Plank']
 var exercises = [
   'Burpees',
@@ -45,6 +49,7 @@ function countDown(i, nextAction) {
 }
 
 function reset() {
+  noSleep.disable()
   welcome.style.display = 'block'
   counter.style.display = 'none'
   description.style.display = 'none'
@@ -59,6 +64,7 @@ function reset() {
 
 function startWorkout() {
   beep.play() // Need to trigger play from user direct interaction
+  noSleep.enable()
   description.style.display = 'block'
   welcome.style.display = 'none'
   counter.style.display = 'block'
@@ -75,7 +81,7 @@ function nextWorkout() {
   }
   body.style.background = '#e74c3c'
   description.innerHTML = exercises[current]
-  countDown(workInterval, rest)
+  countDown(DURATION_WORK, rest)
   progressPoints[current].className = 'done'
   current++
 }
@@ -87,7 +93,7 @@ function rest() {
   }
   body.style.background = '#3498db'
   description.innerHTML = 'Up Next:<br>' + exercises[current]
-  countDown(restInterval, nextWorkout)
+  countDown(DURATION_REST, nextWorkout)
 }
 
 start.addEventListener('click', startWorkout)

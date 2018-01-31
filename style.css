@@ -1,5 +1,5 @@
 body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
   color: #fff;
   background: #3498db;
 }
@@ -11,9 +11,15 @@ h1 {
   line-height: 1em;
 }
 
-a { color: #f1c40f; }
-a:hover { color: #f39c12; }
-a:visited { color: #8e44ad; }
+a {
+  color: #f1c40f;
+}
+a:hover {
+  color: #f39c12;
+}
+a:visited {
+  color: #8e44ad;
+}
 
 hr {
   border: #fff 1px solid;
@@ -65,7 +71,8 @@ button:active {
   margin-right: 2%;
 }
 
-#skip, #reset {
+#skip,
+#reset {
   display: inline-block;
   margin-top: 50px;
   font-size: 24px;
@@ -73,9 +80,9 @@ button:active {
   box-shadow: 0 6px #d35400;
   width: 49%;
   padding: 5 0 5 0px;
-
 }
-#skip:active, #reset:active {
+#skip:active,
+#reset:active {
   top: 2px;
   box-shadow: 0 4px #d35400;
 }
